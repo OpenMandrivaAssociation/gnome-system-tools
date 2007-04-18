@@ -21,7 +21,7 @@ BuildRequires:  scrollkeeper
 BuildRequires:  libmesaglu-devel
 BuildRequires:  liboobs-devel >= 2.17.5
 BuildRequires:  ImageMagick
-BuildRequires:	gnome-doc-utils libxslt-proc
+BuildRequires:	gnome-doc-utils
 BuildRequires:	desktop-file-utils
 #gw for intltool
 BuildRequires:	perl-XML-Parser
@@ -164,5 +164,3 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/nautilus/extensions-1.0/libnautilus-gst-shares.so
 %_libdir/pkgconfig/gnome-system-tools.pc
 %_menudir/%name
-
-
