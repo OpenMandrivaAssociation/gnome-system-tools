@@ -1,7 +1,7 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.18.0
-Release: %mkrel 2
+Version: 2.18.1
+Release: %mkrel 0
 License: 	LGPL
 Group: 		System/Configuration/Other
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -69,37 +69,6 @@ for omf in %buildroot%_datadir/omf/*/*-??.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed s!%buildroot!!)" >> %name.lang
 done
 
-mkdir -p %buildroot/%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-?package(%name): \
-command="%_bindir/network-admin" \
-needs="x11" \
-icon="gnome-fs-network.png" \
-section="System/Configuration/Networking" \
-title="Networking" \
-longtitle="Network adapter setup." xdg="true"
-?package(%name): \
-command="%_bindir/services-admin" \
-needs="x11" \
-icon="gnome-fs-server.png" \
-section="System/Configuration/Boot and Init" \
-title="Services" \
-longtitle="Services Manager" xdg="true"
-?package(%name): \
-command="%_bindir/time-admin" \
-needs="x11" \
-icon="config-date.png" \
-section="System/Configuration/Other" \
-title="Time" \
-longtitle="Time, date and timezone." xdg="true"
-?package(%name): \
-command="%_bindir/users-admin" \
-needs="x11" \
-icon="config-users.png" \
-section="System/Configuration/Other" \
-title="Users" \
-longtitle="Users and groups." xdg="true"
-EOF
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="X-MandrivaLinux-System-Configuration-BootandInit" \
@@ -163,4 +132,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/omf/*/*-C.omf
 %_libdir/nautilus/extensions-1.0/libnautilus-gst-shares.so
 %_libdir/pkgconfig/gnome-system-tools.pc
-%_menudir/%name
