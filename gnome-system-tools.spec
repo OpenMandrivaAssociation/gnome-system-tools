@@ -1,6 +1,6 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.21.1
+Version: 2.21.2.1
 Release: %mkrel 1
 License: 	LGPL
 Group: 		System/Configuration/Other
@@ -19,7 +19,7 @@ BuildRequires:  gtk2-devel >= 2.9.0
 BuildRequires:  libncurses-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  libmesaglu-devel
-BuildRequires:  liboobs-devel >= 2.21.0
+BuildRequires:  liboobs-devel >= 2.21.2
 BuildRequires:  ImageMagick
 BuildRequires:	gnome-doc-utils
 BuildRequires:	desktop-file-utils
