@@ -5,7 +5,6 @@ Release: %mkrel 1
 License: 	LGPL
 Group: 		System/Configuration/Other
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 URL: 		http://www.gnome.org/projects/gst/
 
 Obsoletes:  ximian-setup-tools
