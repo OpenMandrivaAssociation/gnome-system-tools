@@ -1,6 +1,6 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.21.3
+Version: 2.21.5.1
 Release: %mkrel 1
 License: 	LGPL
 Group: 		System/Configuration/Other
@@ -55,7 +55,7 @@ you're using.
 rm -rf $RPM_BUILD_ROOT
 
 %makeinstall_std desktopdir=%_datadir/applications
-rm -f %buildroot%_libdir/nautilus/extensions-1.0/libnautilus*a
+rm -f %buildroot%_libdir/nautilus/extensions-2.0/libnautilus*a
 rm -rf %buildroot/var/lib/scrollkeeper
 %{find_lang} %{name}
 %{find_lang} boot-admin --with-gnome
@@ -130,5 +130,5 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/icons/hicolor/*/devices/*
 %dir %{_datadir}/omf/*/
 %{_datadir}/omf/*/*-C.omf
-%_libdir/nautilus/extensions-1.0/libnautilus-gst-shares.so
+%_libdir/nautilus/extensions-2.0/libnautilus-gst-shares.so
 %_libdir/pkgconfig/gnome-system-tools.pc
