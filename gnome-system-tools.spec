@@ -1,6 +1,6 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.21.91
+Version: 2.21.92
 Release: %mkrel 1
 License: 	LGPL
 Group: 		System/Configuration/Other
@@ -127,7 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/shares.desktop
 %{_datadir}/applications/time.desktop
 %{_datadir}/applications/users.desktop
-%_datadir/icons/hicolor/*/devices/*
+%_datadir/icons/hicolor/*/*/*
 %dir %{_datadir}/omf/*/
 %{_datadir}/omf/*/*-C.omf
 %_libdir/nautilus/extensions-2.0/libnautilus-gst-shares.so
