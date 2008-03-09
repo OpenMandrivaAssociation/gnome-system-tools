@@ -1,6 +1,6 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.21.92
+Version: 2.22.0
 Release: %mkrel 1
 License: 	LGPL
 Group: 		System/Configuration/Other
