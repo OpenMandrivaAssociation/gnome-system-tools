@@ -1,8 +1,8 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.22.0
-Release: %mkrel 3
-License: 	LGPL
+Version: 2.22.1
+Release: %mkrel 1
+License: 	GPLv2+
 Group: 		System/Configuration/Other
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
@@ -52,7 +52,7 @@ you're using.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT *.lang
 
 %makeinstall_std desktopdir=%_datadir/applications
 rm -f %buildroot%_libdir/nautilus/extensions-2.0/libnautilus*a
@@ -65,7 +65,7 @@ rm -rf %buildroot/var/lib/scrollkeeper
 %{find_lang} time-admin --with-gnome
 %{find_lang} users-admin --with-gnome
 cat *-admin.lang >> %name.lang
-for omf in %buildroot%_datadir/omf/*/*-??.omf;do
+for omf in %buildroot%_datadir/omf/*/*-{??,??_??}.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed s!%buildroot!!)" >> %name.lang
 done
 
