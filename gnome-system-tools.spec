@@ -23,8 +23,7 @@ BuildRequires:  liboobs-devel >= 2.21.3
 BuildRequires:  ImageMagick
 BuildRequires:	gnome-doc-utils
 BuildRequires:	desktop-file-utils
-#gw for intltool
-BuildRequires:	perl-XML-Parser
+BuildRequires:	intltool
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
 Requires: system-tools-backends2 >= 2.2.0-3mdv
