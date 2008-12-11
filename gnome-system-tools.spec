@@ -20,7 +20,7 @@ BuildRequires:  libncurses-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  libmesaglu-devel
 BuildRequires:  liboobs-devel >= 2.21.3
-BuildRequires:  ImageMagick
+BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
