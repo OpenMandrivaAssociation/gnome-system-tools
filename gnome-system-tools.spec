@@ -21,6 +21,7 @@ BuildRequires:  libncurses-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  libmesaglu-devel
 BuildRequires:  polkit-devel
+BuildRequires:  libGConf2-devel dbus-glib-devel
 BuildRequires:  liboobs-devel >= 2.21.3
 BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
