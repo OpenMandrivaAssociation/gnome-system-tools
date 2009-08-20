@@ -1,11 +1,10 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.27.2
+Version: 2.27.3
 Release: %mkrel 1
 License: 	GPLv2+
 Group: 		System/Configuration/Other
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-Patch:		gnome-system-tools-2.22.2-format-strings.patch
 Patch1:		gnome-system-tools-2.27.2-desktop-entry.patch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 URL: 		http://www.gnome.org/projects/gst/
@@ -21,8 +20,9 @@ BuildRequires:  gtk2-devel >= 2.9.0
 BuildRequires:  libncurses-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  libmesaglu-devel
-BuildRequires:  polkit-devel
-BuildRequires:  libGConf2-devel dbus-glib-devel
+BuildRequires:  polkit-gnome-devel
+BuildRequires:  libGConf2-devel
+BuildRequires:  libiw-devel
 BuildRequires:  liboobs-devel >= 2.21.3
 BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
@@ -49,7 +49,6 @@ you're using.
 
 %prep
 %setup -q
-%patch -p1
 %patch1 -p1
 
 %build
