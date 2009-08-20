@@ -30,7 +30,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
-Requires: system-tools-backends2 >= 2.2.0-3mdv
+Requires: system-tools-backends2 >= 2.8
 Requires: usermode
 
 %description
