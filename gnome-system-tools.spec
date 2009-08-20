@@ -1,3 +1,4 @@
+%define s_t_b 2.8
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
 Version: 2.27.3
@@ -24,13 +25,14 @@ BuildRequires:  polkit-gnome-devel
 BuildRequires:  libGConf2-devel
 BuildRequires:  libiw-devel
 BuildRequires:  liboobs-devel >= 2.21.3
+BuildRequires: system-tools-backends2 >= %s_t_b
 BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
-Requires: system-tools-backends2 >= 2.8
+Requires: system-tools-backends2 >= %s_t_b
 Requires: usermode
 
 %description
