@@ -1,7 +1,7 @@
 %define s_t_b 2.8
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.29.1
+Version: 2.29.2
 Release: %mkrel 1
 License: 	GPLv2+
 Group: 		System/Configuration/Other
@@ -23,7 +23,7 @@ BuildRequires:  libmesaglu-devel
 BuildRequires:  polkit-gnome-devel
 BuildRequires:  libGConf2-devel
 BuildRequires:  libiw-devel
-BuildRequires:  liboobs-devel >= 2.29.1
+BuildRequires:  liboobs-devel >= 2.29.2
 BuildRequires: system-tools-backends2 >= %s_t_b
 BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
@@ -119,6 +119,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-, root, root)
 %doc README AUTHORS COPYING HACKING NEWS ChangeLog 
 %_sysconfdir/gconf/schemas/gnome-system-tools.schemas
+%dir %_sysconfdir/%name
+%config(noreplace) %_sysconfdir/%name/*.conf
 %{_bindir}/network-admin
 %{_bindir}/services-admin
 %{_bindir}/shares-admin
