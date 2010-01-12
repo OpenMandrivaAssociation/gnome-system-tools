@@ -2,7 +2,7 @@
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
 Version: 2.29.2
-Release: %mkrel 1
+Release: %mkrel 2
 License: 	GPLv2+
 Group: 		System/Configuration/Other
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
