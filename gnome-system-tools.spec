@@ -1,7 +1,7 @@
 %define s_t_b 2.8
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.29.3
+Version: 2.29.90
 Release: %mkrel 1
 License: 	GPLv2+
 Group: 		System/Configuration/Other
@@ -23,7 +23,7 @@ BuildRequires:  libmesaglu-devel
 BuildRequires:  polkit-gnome-devel
 BuildRequires:  libGConf2-devel
 BuildRequires:  libiw-devel
-BuildRequires:  liboobs-devel >= 2.29.3
+BuildRequires:  liboobs-devel >= 2.29.90
 BuildRequires: system-tools-backends2 >= %s_t_b
 BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
