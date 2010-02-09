@@ -29,6 +29,8 @@ BuildRequires:  imagemagick
 BuildRequires:	gnome-doc-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
+#gw libtool dep:
+BuildRequires:	hal-devel
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
 Requires: system-tools-backends2 >= %s_t_b
