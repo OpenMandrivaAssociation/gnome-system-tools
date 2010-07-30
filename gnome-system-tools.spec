@@ -1,12 +1,13 @@
 %define s_t_b 2.9.4
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.30.2
+Version: 2.31.1
 Release: %mkrel 1
 License: 	GPLv2+
 Group: 		System/Configuration/Other
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 Patch0: gnome-system-tools-2.30.1-fix-linking.patch
+Patch1: gnome-system-tools-2.31.1-missing-includes.patch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 URL: 		http://www.gnome.org/projects/gst/
 
@@ -18,6 +19,7 @@ BuildRequires:  cracklib-devel
 BuildRequires:	libnautilus-devel >= 2.9.3
 BuildRequires:  libvte-devel >= 0.10.20
 BuildRequires:  gtk2-devel >= 2.9.0
+BuildRequires:  glib2-devel >= 2.25.3
 BuildRequires:  libncurses-devel
 BuildRequires:  scrollkeeper
 BuildRequires:  libmesaglu-devel
@@ -101,29 +103,10 @@ for bin in *;do ln -s consolehelper %buildroot%_bindir/$bin;done
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%if %mdkversion < 200900
-%post
-%update_scrollkeeper
-%update_menus
-%post_install_gconf_schemas %name
-%update_icon_cache hicolor
-%endif
-
-%preun
-%preun_uninstall_gconf_schemas %name
-
-%if %mdkversion < 200900
-%postun
-%clean_scrollkeeper
-%clean_menus
-%clean_icon_cache hicolor
-%endif
-
 
 %files -f %{name}.lang
 %defattr(-, root, root)
 %doc README AUTHORS COPYING HACKING NEWS ChangeLog 
-%_sysconfdir/gconf/schemas/gnome-system-tools.schemas
 %dir %_sysconfdir/%name
 %config(noreplace) %_sysconfdir/%name/*.conf
 %{_bindir}/network-admin
@@ -145,5 +128,6 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/icons/hicolor/*/*/*
 %dir %{_datadir}/omf/*/
 %{_datadir}/omf/*/*-C.omf
+%{_datadir}/glib-2.0/schemas/org.gnome.system-tools.gschema.xml
 %_libdir/nautilus/extensions-2.0/libnautilus-gst-shares.so
 %_libdir/pkgconfig/gnome-system-tools.pc
