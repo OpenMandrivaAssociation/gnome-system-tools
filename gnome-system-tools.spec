@@ -1,7 +1,7 @@
 %define s_t_b 2.9.4
 Summary:	GNOME System Tools
 Name: 		gnome-system-tools 
-Version: 2.31.92
+Version: 2.32.0
 Release: %mkrel 1
 License: 	GPLv2+
 Group: 		System/Configuration/Other
