@@ -9,7 +9,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.b
 Patch0: gnome-system-tools-2.30.1-fix-linking.patch
 Patch1: gnome-system-tools-2.31.1-missing-includes.patch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
-URL: 		http://www.gnome.org/projects/gst/
+URL: 		https://www.gnome.org/projects/gst/
 
 Obsoletes:  ximian-setup-tools
 Obsoletes:  ximian-setup-tools-devel
